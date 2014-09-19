@@ -51,6 +51,13 @@ public class App {
             System.out.println("Lambda String withWhiteSpace test(Segregator): " + withWhiteSpace.func("Segregator"));
         }
 
+        {
+            String inStr = "Lambda Bad Ass";
+            String outStr;
+            outStr=stringOp((str)-> str.toUpperCase(),inStr);
+            System.out.println("LBA in uppercase:" + outStr);
+        }
+        
     }
     
     static String stringOp(PassingLambdaExpAsArgs plaa, String s){

@@ -71,6 +71,15 @@ public class App {
 
             }, inStr);
             System.out.println("The LBA without spaces:" + outStr);
+
+            PassingLambdaExpAsArgs revString = (str) -> {
+                String result = "";
+                for (int i = str.length() - 1; i >= 0; i--) {
+                    result += str.charAt(i);
+                }
+                return result;
+            };
+            System.out.println("The LBA reversed:" + stringOp(revString, inStr));
         }
 
     }

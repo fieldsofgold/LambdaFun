@@ -29,12 +29,27 @@ public class App {
         {
             StringRevFunc RevString = (str) -> {
                 String result = "";
-                for(int i=str.length()-1; i>=0; i--)
-                    result+=str.charAt(i);
+                for (int i = str.length() - 1; i >= 0; i--) {
+                    result += str.charAt(i);
+                }
                 return result;
             };
             System.out.println("Lambda String Reverse test(Lambda): " + RevString.revFunc("Lambda"));
             System.out.println("Lambda String Reverse test(Segregator): " + RevString.revFunc("Segregator"));
         }
+        {
+            SomeFunc<String> withWhiteSpace = (str) -> {
+                String result = "";
+                for (int i = 0; i <= str.length() - 1; i++) {
+                    result += str.charAt(i);
+                    result += " ";
+
+                }
+                return result;
+            };
+            System.out.println("Lambda String withWhiteSpace test(Lambda): " + withWhiteSpace.func("Lambda"));
+            System.out.println("Lambda String withWhiteSpace test(Segregator): " + withWhiteSpace.func("Segregator"));
+        }
+
     }
 }

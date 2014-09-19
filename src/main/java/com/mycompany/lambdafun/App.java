@@ -26,5 +26,15 @@ public class App {
             System.out.println("Lambda factorial test(4): " + factorial.func(4));
             System.out.println("Lambda factorial test(5): " + factorial.func(5));
         }
+        {
+            StringRevFunc RevString = (str) -> {
+                String result = "";
+                for(int i=str.length()-1; i>=0; i--)
+                    result+=str.charAt(i);
+                return result;
+            };
+            System.out.println("Lambda String Reverse test(Lambda): " + RevString.revFunc("Lambda"));
+            System.out.println("Lambda String Reverse test(Segregator): " + RevString.revFunc("Segregator"));
+        }
     }
 }

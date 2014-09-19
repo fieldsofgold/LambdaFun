@@ -10,6 +10,6 @@ package com.mycompany.lambdafun;
  *
  * @author Michael
  */
-public interface SomeFunc {
-    
+public interface SomeFunc<T> {
+    T func(T t);
 }

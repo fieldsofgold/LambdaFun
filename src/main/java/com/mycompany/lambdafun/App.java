@@ -52,4 +52,8 @@ public class App {
         }
 
     }
+    
+    static String stringOp(PassingLambdaExpAsArgs plaa, String s){
+        return plaa.func(s);
+    }
 }

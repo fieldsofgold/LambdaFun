@@ -60,7 +60,7 @@ public class App {
             outStr = stringOp((str) -> {
                 String result = "";
                 int i;
-                
+
                 for (i = 0; i < str.length(); i++) {
                     if (str.charAt(i) != ' ') {
                         result += str.charAt(i);

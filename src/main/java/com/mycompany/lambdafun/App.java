@@ -54,13 +54,28 @@ public class App {
         {
             String inStr = "Lambda Bad Ass";
             String outStr;
-            outStr=stringOp((str)-> str.toUpperCase(),inStr);
+            outStr = stringOp((str) -> str.toUpperCase(), inStr);
             System.out.println("LBA in uppercase:" + outStr);
+
+            outStr = stringOp((str) -> {
+                String result = "";
+                int i;
+                
+                for (i = 0; i < str.length(); i++) {
+                    if (str.charAt(i) != ' ') {
+                        result += str.charAt(i);
+                    }
+
+                }
+                return result;
+
+            }, inStr);
+            System.out.println("The LBA without spaces:" + outStr);
         }
-        
+
     }
-    
-    static String stringOp(PassingLambdaExpAsArgs plaa, String s){
+
+    static String stringOp(PassingLambdaExpAsArgs plaa, String s) {
         return plaa.func(s);
     }
 }

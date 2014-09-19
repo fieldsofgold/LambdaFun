@@ -22,7 +22,9 @@ public class App {
                 }
                 return result;
             };
-            System.out.println("Lambda factorial test: " + factorial.func(5));
+            System.out.println("Lambda factorial test(3): " + factorial.func(3));
+            System.out.println("Lambda factorial test(4): " + factorial.func(4));
+            System.out.println("Lambda factorial test(5): " + factorial.func(5));
         }
     }
 }

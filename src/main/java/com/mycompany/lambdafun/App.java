@@ -1,5 +1,9 @@
 package com.mycompany.lambdafun;
 
+import methodReftoIntanceMethods.HighTemp;
+import methodReftoIntanceMethods.InstanceMethWithObjectRefDemo;
+import methodReftoIntanceMethods.MyFunc;
+
 /**
  * Hello world!
  *
@@ -82,6 +86,19 @@ public class App {
             System.out.println("The LBA reversed:" + stringOp(revString, inStr));
         }
 
+        /////////////////////////////////////////////////////////////////////////
+        //Method Reference to Instance Methods
+        /////////////////////////////////////////////////////////////////////////
+        {
+            int count;
+
+            HighTemp[] weekDayHighs = {new HighTemp(89), new HighTemp(90), new HighTemp(89), new HighTemp(84), new HighTemp(82), new HighTemp(89), new HighTemp(91), new HighTemp(83)};
+
+            count = counter(weekDayHighs, HighTemp::sameTemp, new HighTemp(82));
+            
+            
+            
+        }
     }
 
     static String stringOp(PassingLambdaExpAsArgs plaa, String s) {
